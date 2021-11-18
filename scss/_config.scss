@@ -1,0 +1,9 @@
+$firstColorText: #FFF;
+$secondaryColorText: #0D0D0D;
+
+
+@function remify($value) {
+        $remValue: ($value / 16) + rem;
+        @return $remValue;
+}
+
