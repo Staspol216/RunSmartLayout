@@ -19,6 +19,10 @@
     />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -45,7 +49,7 @@
       </header>
 
       <main class="page">
-        <!--FIRST-SCREEN-->
+        <!-- FIRST-SCREEN -->
         <section class="page__first-screen first-screen">
           <div class="first-screen__container container">
             <div class="first-screen__body">
@@ -182,25 +186,42 @@
         </section>
 
         <!--SLIDER-->
-        <section class="page__slider slider">
+        <section class="page__swiper slider">
           <div class="container slider__container">
-            <h2 class="slider__title">Картинкf пульсометр</h2>
-            <div class="slider__body">
-              <button type="button" class="slider__btn slider__btn--left">
+            <div class="slider__btns">
+              <button class="swiper-button-prev slider__btn slider__btn--left">
                 <img
                   src="img/slider/button-icon/chevron_left_solid.svg"
                   alt="Кнопка вправо"
                 />
               </button>
-              <div class="slider__img">
-                <img src="img/slider/puls/slide1.png" alt="Пульсометр" />
-              </div>
-              <button type="button" class="slider__btn slider__btn--right">
+              <button class="swiper-button-next slider__btn slider__btn--right">
                 <img
                   src="img/slider/button-icon/chevron_right_solid.svg"
                   alt="Кнопка влево"
                 />
               </button>
+            </div>
+            <div class="swiper slider__body">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper slider__carousel">
+                <!-- Slides -->
+                <div class="swiper-slide slider__item">
+                  <div class="slider__image">
+                    <img src="img/slider/puls/slide1.png" alt="slide1" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__item">
+                  <div class="slider__image">
+                    <img src="img/slider/puls/slide2.png" alt="slide2" />
+                  </div>
+                </div>
+                <div class="swiper-slide slider__item">
+                  <div class="slider__image">
+                    <img src="img/slider/puls/slide3.png" alt="slide3" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -488,10 +509,7 @@
             <h2 class="reviews__title">Отзывы клиентов</h2>
             <div class="reviews__item item-review">
               <div class="item-review__image">
-                <img
-                  src="img/reviews/photo_1.jpg"
-                  alt="Фото Участника 1"
-                />
+                <img src="img/reviews/photo_1.jpg" alt="Фото Участника 1" />
               </div>
               <div class="item-review__content">
                 <div class="item-review__title">Ирина Иванченко</div>
@@ -512,10 +530,7 @@
             </div>
             <div class="reviews__item item-review">
               <div class="item-review__image">
-                <img
-                  src="img/reviews/photo_2.jpg"
-                  alt="Фото Участника 2"
-                />
+                <img src="img/reviews/photo_2.jpg" alt="Фото Участника 2" />
               </div>
               <div class="item-review__content">
                 <div class="item-review__title">Иван Сёмочкин</div>
@@ -538,10 +553,7 @@
             </div>
             <div class="reviews__item item-review">
               <div class="item-review__image">
-                <img
-                  src="img/reviews/photo_3.jpg"
-                  alt="Фото Участника 3"
-                />
+                <img src="img/reviews/photo_3.jpg" alt="Фото Участника 3" />
               </div>
               <div class="item-review__content">
                 <div class="item-review__title">Юлия Дашкина</div>
@@ -594,5 +606,7 @@
         />
       </footer>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
