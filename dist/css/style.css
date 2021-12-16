@@ -370,8 +370,10 @@ body {
   justify-content: center;
 }
 
-.catalog__btn {
-  display: inline-block;
+.tabs-nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 12.5rem;
   height: 3.125rem;
@@ -386,23 +388,26 @@ body {
   color: #6b6b6b;
   cursor: pointer;
 }
-.catalog__btn:not(:last-child) {
+.tabs-nav__btn:not(:last-child) {
   margin-right: 0.625rem;
 }
-.catalog__btn--active {
+.tabs-nav__btn.is-active {
   background: #c70101;
   color: #FFF;
 }
-.catalog__btn .catalog__text-btn {
+.tabs-nav__btn .tabs-nav__text-btn {
   display: block;
   transform: skewX(-160deg);
 }
 
-.catalog__body {
-  display: grid;
+.catalog__content {
+  display: none;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   gap: 1.125rem;
   margin-top: 3.5625rem;
+}
+.catalog__content.is-active {
+  display: grid;
 }
 
 .item-catalog {
