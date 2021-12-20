@@ -391,23 +391,31 @@ body {
 .tabs-nav__btn:not(:last-child) {
   margin-right: 0.625rem;
 }
-.tabs-nav__btn.is-active {
+.tabs-nav__btn.active {
   background: #c70101;
   color: #FFF;
+}
+.tabs-nav__btn.hide {
+  background: transparent;
+  color: #6b6b6b;
 }
 .tabs-nav__btn .tabs-nav__text-btn {
   display: block;
   transform: skewX(-160deg);
+  pointer-events: none;
 }
 
 .catalog__content {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   gap: 1.125rem;
   margin-top: 3.5625rem;
 }
-.catalog__content.is-active {
+.catalog__content.active {
   display: grid;
+}
+.catalog__content.hide {
+  display: none;
 }
 
 .item-catalog {

@@ -467,29 +467,37 @@ body {
     margin-right: remify(10);
   }
 
-  &.is-active {
-    background: #c70101;
-    color: $firstColorText;
-  }
-
   .tabs-nav__text-btn {
     display: block;
     transform: skewX(-160deg);
+    pointer-events: none;
   }
 }
-
+.js-catalog-tabBtn {
+  &.active {
+    background: #c70101;
+    color: $firstColorText;
+  }
+  &.hide {
+    background: transparent;
+    color: #6b6b6b;
+  }
+}
 .catalog__body {
 }
 
 .catalog__content {
-  display: none;
-
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(remify(250), 1fr));
   gap: remify(18);
   margin-top: remify(57);
-  
-  &.is-active {
+}
+.js-catalog-content {
+  &.active {
     display: grid;
+  }
+  &.hide {
+    display: none;
   }
 }
 
